@@ -1,0 +1,200 @@
+/* --- RESET E CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* --- CABEÇALHO E MENU --- */
+header {
+    background-color: #8a09b18e;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    background-color: #420530c4;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #23044d83;
+    color: #ffffff;
+}
+
+/* --- SEÇÕES DE CONTEÚDO --- */
+section {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #33061f;
+    border-bottom: 3px solid #440163;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* --- IMAGENS PÁGINA FIXA --- */
+.content-img {
+    text-align: center;
+    margin-top: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* --- GRID E CARDS DE GIFS (ATÉ 5 POR PÁGINA) --- */
+.gif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.gif-card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.gif-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.gif-card p {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: #555;
+}
+
+/* --- PAGINAÇÃO --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #7112b1cb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #440649;
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#pageInfo {
+    font-weight: bold;
+    color: #5d1772;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    text-align: center;
+    background-color: #4e175c;
+    color: white;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* --- BOTÃO VOLTAR AO TOPO --- */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #315b7d;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    section {
+        margin: 15px;
+        padding: 20px 15px;
+    }
+
+    .gif-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
